@@ -1,15 +1,17 @@
-/* String
-const what = "Nicolas";
-*/
+const something = "Something";
+const daysOfWeek = [
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat",
+  "Sun",
+  54,
+  true,
+  "stuff",
+  "lalala",
+  something
+];
 
-/* Boolean
-const wat = true; (true = 1, false = 0)
-*/
-
-/* Number
-const wat = 666;
-*/
-
-/* Float
-const wat = 55.1;
-*/
+console.log(daysOfWeek);
