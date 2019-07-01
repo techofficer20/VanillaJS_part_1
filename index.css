@@ -1,15 +1,19 @@
 body {
   background-color: #ecf0f1;
-  color: white;
+  color: #ffffff;
 }
 h1 {
+  text-align: center;
+  font-size: 200px;
   transition: color 0.5s ease-in-out;
+  margin-bottom: 20px;
 }
 
 .clicked {
 }
 .form,
-.greetings {
+.greetings,
+.js-toDoForm {
   display: none;
 }
 
@@ -33,4 +37,31 @@ h1 {
   height: 100%;
   z-index: -1;
   animation: fadeIn 0.5s linear;
+}
+.form,
+.js-toDoForm,
+h4 {
+  text-align: center;
+}
+span {
+  text-align: center;
+}
+.js-greetings {
+  font-size: 50px;
+  margin-top: 30px;
+}
+input {
+  font-size: 50px;
+  margin-bottom: 10px;
+  border: 3px solid blanchedalmond;
+  border-radius: 20px;
+  text-align: center;
+}
+ul {
+  text-align: left;
+  margin-left: 80%;
+  margin-bottom: 0px;
+}
+button {
+  margin-right: 10px;
 }
