@@ -8,7 +8,19 @@ const USER_LS = "currentUser",
   // USER_LS라는 상수는 currnetUser로 정의
   SHOWING_CN = "showing";
 // SHOWING_CN이라는 상수는 showing으로 정의
-
+function saveName(text) {
+  localStorage.setItem(USER_LS, text);
+}
+function handleSubmit(event) {
+  event.preventDefault(); // 엔터를 눌렀을 때 텍스트가 자동으로 사라지고 새로고침 되었던 걸 막는다.
+  const currentValue = input.value;
+  paintGreeting(currentValue);
+  saveName(currentValue);
+}
+function askForName() {
+  form.classList.add(SHOWING_CN); // form에서의 클래스에 showing이라는 클래스를 추가 (이름 입력 창 보여짐)
+  form.addEventListener("submit", handleSubmit);
+}
 function paintGreeting(text) {
   form.classList.remove(SHOWING_CN);
   // form에서의 클래스 중 showing이라는 클래스를 제거 (이름 입력 창 없어짐)
@@ -22,7 +34,7 @@ function loadName() {
   const currentUser = localStorage.getItem(USER_LS);
   // currentUser라는 상수에 로컬 스토리지에서 currentUser를 호출했을 때의 리턴값을 저장.
   if (currentUser === null) {
-    // she is not
+    askForName();
   } else {
     paintGreeting(currentUser);
   }
